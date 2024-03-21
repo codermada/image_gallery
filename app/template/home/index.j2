@@ -1,0 +1,29 @@
+{% extends 'base.j2' %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<div>
+<form action="" method="GET">
+    <input type="text" id="search">
+    <input type="submit" value="search">
+</form>
+    
+</div>
+<div class='d-flex flex-wrap'>
+    {% for i in images %}
+        {% set i = i.id | string() %}
+        <div>
+            <a href="{{ url_for('static', filename="IMAGES/"+i+".jpg") }}" target="_blank">
+                <img src="{{ url_for('static', filename="IMAGES/"+i+".jpg") }}" class='p-2'/>
+            </a>
+        </div>
+       
+    {% endfor %}
+</div>
+    
+
+<div class="pagination">
+{{ render_pagination(pagination, '.index') }}
+</div>
+{% endblock %}

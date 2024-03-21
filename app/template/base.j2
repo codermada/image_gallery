@@ -1,0 +1,16 @@
+{% from 'bootstrap5/pagination.html' import render_pagination  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <link rel="stylesheet" href={{ url_for('static', filename='css/styles.css') }} />
+        <title>{% block title %}{% endblock %} - Gallery</title>
+    {% endblock %}
+    {{ bootstrap.load_css() }}
+    
+</head>
+<body>
+    <div id="content" class='container-fluid m-5'>{% block content %}{% endblock %}</div>
+    {{ bootstrap.load_js() }}
+</body>
+</html>
