@@ -2,7 +2,7 @@ from flask_script import Manager, Shell
 from flask_migrate import Migrate, init, upgrade, migrate
 
 from app import create_app, db
-from app.models import Image#, Description
+from app.models import Image, Description
 
 app = create_app('devConfig')
 manager = Manager(app)
