@@ -2,11 +2,7 @@ img {
   width: 200px;
   transition-property: width;
 }
-img::after {
-  width: 100%;
-  height: 120px;
-  background-color: black;
-}
+
 img:hover {
   width: 300px;
 }
