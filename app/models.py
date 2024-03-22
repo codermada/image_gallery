@@ -8,6 +8,13 @@ inclusions = db.Table('inclusions',
 class Image(db.Model):
     __tablename__ = 'images'
     id = db.Column(db.Integer, primary_key=True)
+    @staticmethod
+    def generate(number):
+    	for i in range(number):
+    	    image = Image()
+    	    db.session.add(image)
+    	    db.session.commit()
+    	    print(f"image record {image.id} created")
     def __repr__(self):
         return f'<image {self.id}>'
 

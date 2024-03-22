@@ -1,5 +1,5 @@
 ### usage: ./rename_files.sh source_folder output_folder initial_count
-### example: ./rename_files.sh source IMAGES 0
+### example: ./rename_files.sh source IMAGES 1
 
 directory=$1
 
